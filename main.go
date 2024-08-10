@@ -58,7 +58,7 @@ func main() {
 func run(ctx context.Context, backend *url.URL) error {
 	sess, err := ngrok.Connect(ctx,
 		ngrok.WithAuthtokenFromEnv(),
-		ngrok.WithLogger(&logger{lvl: ngrok_log.LogLevelDebug}),
+		ngrok.WithLogger(&logger{lvl: ngrok_log.LogLevelInfo}),
 	)
 	if err != nil {
 		return err
@@ -68,7 +68,7 @@ func run(ctx context.Context, backend *url.URL) error {
 		fwd, err := sess.ListenAndForward(ctx,
 			backend,
 			config.HTTPEndpoint(
-				config.WithDomain("true-cobra-jointly.ngrok-free.app"),
+				config.WithDomain("decent-doe-finer.ngrok-free.app"),
 			),
 		)
 		if err != nil {
