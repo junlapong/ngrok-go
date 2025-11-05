@@ -12,5 +12,5 @@ go install github.com/junlapong/ngrok-go@latest
 ## Run
 
 ```sh
-NGROK_AUTHTOKEN=<NGROK_AUTHTOKEN> http://localhost:8080
+NGROK_AUTHTOKEN=<NGROK_AUTHTOKEN> ngrok-go http://localhost:8080
 ```
